@@ -16,18 +16,19 @@ This is the repo for Group 5's project in DGM 3790. (Fall 2014)
 
 2. **Clone This Repo To Your Local Drive**
 
-    After choosing a location on your local drive use the "git clone" directive to clone this project to your local drive. 
+    After choosing a location on your local drive use the "git clone" directive to clone this project to your local drive.
     
-       Example:
-       
-       $ cd <local drive>
-       
-       $ git clone https://github.com/jakerstf/HomeworkPlannerApp.git
+        Example:
+        
+        $ cd <location you want the files to go>
+        
+        $ git clone https://github.com/jakerstf/HomeworkPlannerApp.git
+      
        
 
 3. **Test The App**
     
-    If you need to, change your directory to "HomeworkPlannerApp"
+    You may need change your directory to "HomeworkPlannerApp." Use the following example if you need to.
         
         Example:
         
