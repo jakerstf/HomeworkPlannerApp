@@ -36,13 +36,19 @@ This is the repo for Group 5's project in DGM 3790. (Fall 2014)
         
     Then run your local server to test the app.
         
-        *Example:
+        Example:
         
-        $ ionic serve*
+        $ ionic serve
         
         
         
-
+        
+        
+        
+        
+        
+        
+===
 
 Check Canvas to see steps on how to clone, edit and push changes to our project. - Chris N
 
