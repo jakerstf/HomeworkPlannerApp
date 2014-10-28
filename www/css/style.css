@@ -1,1 +1,6 @@
 /* Empty. Add your own CSS if you like */
+
+ion-item >  span,
+ion-item > a > span{
+ margin-right: 10px;
+}

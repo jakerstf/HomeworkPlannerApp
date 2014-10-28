@@ -9,21 +9,21 @@
 
   <ion-side-menu side="left">
     <header class="bar bar-header bar-stable">
-      <h1 class="title">Left</h1>
+      <h1 class="title">Homework Smasher</h1>
     </header>
     <ion-content class="has-header">
-      <ion-list>
+      <ion-list class="navigation">
         <ion-item nav-clear menu-close ng-click="login()">
-          Login
+           <span class="ion-ios7-locked"></span> Login
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/search">
-          Search -
+        <ion-item nav-clear menu-close href="#/app/calendar">
+          <span class="ion-calendar"></span> Calendar
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/browse">
-          Calendar
+        <ion-item nav-clear menu-close href="#/app/todo">
+            <span class="ion-android-checkmark"></span> To Do List
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/playlists">
-          To Do List
+        <ion-item nav-clear menu-close href="#/app/settings">
+            <span class="ion-ios7-gear"></span> Settings
         </ion-item>
       </ion-list>
     </ion-content>
