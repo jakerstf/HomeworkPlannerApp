@@ -6,63 +6,94 @@
     <h1>Calendar</h1>
       <p>See upcoming assignments, quizzes, tests, etc.</p>
 
-      <h2>October 2014</h2>
+      <head>
+          <meta charset="utf-8">
+          <title>Calendar</title>
+          <link rel="stylesheet" type="text/css" href="main.css" />
+          <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+          <link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100,200,300,500,600,700' rel='stylesheet' type='text/css'>
+          <link rel="stylesheet" type="text/css" href="../css/calendarTest.css">
+      </head>
 
-      <table id="month">
-          <thead>
-          <tr>
-              <th>Monday</th>
-              <th>Tuesday</th>
-              <th>Wednesday</th>
-              <th>Thursday</th>
-              <th>Friday</th>
-              <th class="weekend">Saturday</th>
-              <th class="weekend">Sunday</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-              <td class="previous"><span class="date">29</span><div class="day"></div></td>
-              <td class="previous"><span class="date">30</span><div class="day"></div></td>
-              <td><span class="date">1</span><div class="day"></div></td>
-              <td><span class="date">2</span><div class="day"></div></td>
-              <td><span class="date">3</span><div class="day"></div></td>
-              <td class="weekend"><span class="date">4</span><div class="day"></div></td>
-              <td class="weekend"><span class="date">5</span><div class="day"></div></td>
-          </tr><tr>
-              <td><span class="date">6</span><div class="day"></div></td>
-              <td><span class="date">7</span><div class="day"></div></td>
-              <td><span class="date">8</span><div class="day"></div></td>
-              <td><span class="date">9</span><div class="day"></div></td>
-              <td><span class="date">10</span><div class="day"></div></td>
-              <td class="weekend"><span class="date">11</span><div class="day"></div></td>
-              <td class="weekend"><span class="date">12</span><div class="day"></div></td>
-          </tr><tr>
-              <td><span class="date">13</span><div class="day"></div></td>
-              <td><span class="date">14</span><div class="day"></div></td>
-              <td><span class="date">15</span><div class="day"></div></td>
-              <td><span class="date">16</span><div class="day"></div></td>
-              <td><span class="date">17</span><div class="day"></div></td>
-              <td class="weekend"><span class="date">18</span><div class="day"></div></td>
-              <td class="weekend"><span class="date">19</span><div class="day"></div></td>
-          </tr><tr>
-              <td><span class="date">20</span><div class="day"></div></td>
-              <td><span class="date">21</span><div class="day"></div></td>
-              <td><span class="date">22</span><div class="day"></div></td>
-              <td><span class="date">23</span><div class="day"></div></td>
-              <td><span class="date">24</span><div class="day"></div></td>
-              <td class="weekend"><span class="date">25</span><div class="day"></div></td>
-              <td class="weekend"><span class="date">26</span><div class="day"></div></td>
-          </tr><tr>
-              <td><span class="date">27</span><div class="day"></div></td>
-              <td><span class="date">28</span><div class="day"></div></td>
-              <td><span class="date">29</span><div class="day"></div></td>
-              <td><span class="date">30</span><div class="day"></div></td>
-              <td><span class="date">31</span><div class="day"></div></td>
-              <td class="weekend next"><span class="date">1</span><div class="day"></div></td>
-              <td class="weekend next"><span class="date">2</span><div class="day"></div></td>
-          </tr>
-          </tbody>
-      </table>
+      <body>
+      <div id="wrapOverall">
+          <header>
+              <h1>Calendar</h1>
+          </header>
+
+          <div id="calendar">
+              <table>
+                  <div id="month">
+                      <th class="month" colspan="7">SEPTEMBER</th>
+                  </div> <!-- MONTH -->
+
+                  <div id="weeks">
+                      <tr class="weeks">
+                          <td>SUN</td>
+                          <td>MON</td>
+                          <td>TUE</td>
+                          <td>WED</td>
+                          <td>THU</td>
+                          <td>FRI</td>
+                          <td>SAT</td>
+                      </tr>
+                  </div> <!-- WEEKS -->
+
+                  <div id="days">
+                      <tr class="week1">
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td class="days">1</td>
+                          <td class="days">2</td>
+                      </tr>
+
+                      <tr class="week2">
+                          <td class="days">3</td>
+                          <td class="days">4</td>
+                          <td class="days">5</td>
+                          <td class="days">6</td>
+                          <td class="days">7</td>
+                          <td class="days">8</td>
+                          <td class="days">9</td>
+                      </tr>
+
+                      <tr class="week3">
+                          <td class="days">10</td>
+                          <td class="days">11</td>
+                          <td class="days">12</td>
+                          <td class="days">13</td>
+                          <td class="days">14</td>
+                          <td class="days">15</td>
+                          <td class="days">16</td>
+                      </tr>
+
+                      <tr class="week4">
+                          <td class="days">17</td>
+                          <td class="days">18</td>
+                          <td class="days">19</td>
+                          <td class="days">20</td>
+                          <td class="days">21</td>
+                          <td class="days">22</td>
+                          <td class="days">23</td>
+                      </tr>
+
+                      <tr class="week5">
+                          <td class="days">24</td>
+                          <td class="days">25</td>
+                          <td class="days">26</td>
+                          <td class="days">27</td>
+                          <td class="days">28</td>
+                          <td class="days">29</td>
+                          <td class="days">30</td>
+                      </tr>
+                  </div> <!-- DAYS -->
+              </table>
+          </div> <!-- CALENDAR -->
+      </div> <!-- WRAP OPVERALL -->
+      </body>
+
   </ion-content>
 </ion-view>
