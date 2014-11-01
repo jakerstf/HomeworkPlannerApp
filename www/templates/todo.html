@@ -1,0 +1,20 @@
+<ion-view title="To Do List" ng-app>
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header" ng-controller="TodoCtrl">
+        <ion-list>
+            <ion-item ng-repeat="todo in todos">
+                <ion-checkbox ng-model="todo.done"><span class="done-{{todo.done}}">{{todo.text}}</span></ion-checkbox>
+
+            </ion-item>
+        </ion-list>
+
+        <form>
+            <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" ng-model-instant />
+            <button class="add-btn" ng-click="addTodo()"><h2>Add</h2></button>
+        </form>
+
+        <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
+    </ion-content>
+</ion-view>

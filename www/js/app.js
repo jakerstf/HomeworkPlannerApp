@@ -47,6 +47,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+    .state('app.todo', {
+       url: "/todo",
+       views: {
+         'menuContent' :{
+          templateUrl: "templates/todo.html"
+              }
+          }
+      })
     .state('app.playlists', {
       url: "/playlists",
       views: {
