@@ -5,11 +5,25 @@ angular.module('starter.controllers', [])
 
   }];
 
+
+
+
+
 $scope.AddItem = function(data){
-	$scope.toDoListItems.push({task:data.newItem,status:'not done'});
-	 data.newItem = ' ';
+	$scope.toDoListItems.push({task:data.newItem, task2:data.newItem2, task3:data.newItem3, task4:data.newItem4, task5:data.newItem5});
+
+
+	 data.newItem =' ';
+     data.newItem2 =' ';
+     data.newItem3 =' ';
+     data.newItem4 =' ';
+     data.newItem5 =' ';
+
          $scope.closeModal();
   };
+
+
+
   
 $ionicModal.fromTemplateUrl('modal.html', {
     scope: $scope,
@@ -24,9 +38,16 @@ $ionicModal.fromTemplateUrl('modal.html', {
   $scope.closeModal = function() {
     $scope.modal.hide();
   };
+
   //Cleanup the modal when we're done with it!
   $scope.$on('$destroy', function() {
     $scope.modal.remove();
   });
+
+
+
+
   
 });
+
+
