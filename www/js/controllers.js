@@ -35,14 +35,24 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { title: 'Log in to Your Profile', id: 1 },
+    { title: 'View Calendar', id: 2 },
+    { title: 'Check Schedule', id: 3 },
+    { title: 'Create a To-Do List', id: 4 },
+    { title: 'Manage Tasks', id: 5 },
+    { title: 'And more!', id: 6 }
   ];
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+.controller('CalendarCtrl', function($scope) {
+
+        $scope.settingsList = [
+            { text: "Past Assignments", checked: false },
+            { text: "Future Assignments", checked: false },
+            { text: "Uncategorized", checked: false }
+        ];
+
 });
