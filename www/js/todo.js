@@ -1,22 +1,54 @@
 function TodoCtrl($scope) {
+    $scope.todos = [];
+    $scope.markAll = false;
 
-    $scope.todos = [
-        {text:'Learn AngularJS', done:false},
-        {text: 'Build an app', done:false}
-    ];
-
-    $scope.getTotalTodos = function () {
-        return $scope.todos.length;
+    $scope.addTodo = function() {
+        if(event.keyCode == 13 && $scope.todoText){
+            $scope.todos.push({text:$scope.todoText, done:false});
+            $scope.todoText = '';
+        }
+    };
+    $scope.isTodo = function(){
+        return $scope.todos.length > 0;
+    }
+    $scope.toggleEditMode = function(){
+        $(event.target).closest('li').toggleClass('editing');
+    };
+    $scope.editOnEnter = function(todo){
+        if(event.keyCode == 13 && todo.text){
+            $scope.toggleEditMode();
+        }
     };
 
-    $scope.addTodo = function () {
-        $scope.todos.push({text:$scope.formTodoText, done:false});
-        $scope.formTodoText = '';
+    $scope.remaining = function() {
+        var count = 0;
+        angular.forEach($scope.todos, function(todo) {
+            count += todo.done ? 0 : 1;
+        });
+        return count;
     };
 
-    $scope.clearCompleted = function () {
-        $scope.todos = _.filter($scope.todos, function(todo){
-            return !todo.done;
+    $scope.hasDone = function() {
+        return ($scope.todos.length != $scope.remaining());
+    }
+
+    $scope.itemText = function() {
+        return ($scope.todos.length - $scope.remaining() > 1) ? "items" : "item";
+    };
+
+    $scope.toggleMarkAll = function() {
+        angular.forEach($scope.todos, function(todo) {
+            todo.done =$scope.markAll;
         });
     };
+
+    $scope.clear = function() {
+        var oldTodos = $scope.todos;
+        $scope.todos = [];
+        angular.forEach(oldTodos, function(todo) {
+            if (!todo.done) $scope.todos.push(todo);
+        });
+    };
+
 }
+

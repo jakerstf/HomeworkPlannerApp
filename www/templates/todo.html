@@ -3,18 +3,40 @@
         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
     </ion-nav-buttons>
     <ion-content class="has-header" ng-controller="TodoCtrl">
-        <ion-list>
-            <ion-item ng-repeat="todo in todos">
-                <ion-checkbox ng-model="todo.done"><span class="done-{{todo.done}}">{{todo.text}}</span></ion-checkbox>
+        <div ng-app>
+            <div id="todoapp" ng-controller="TodoCtrl">
+                <input id="new-todo" type="text" ng-model="todoText"  size="30"
+                placeholder="What needs to be done?" ng-keyup="addTodo()"/>
+                <select id="todopriority">
+                    <option>Select Priority</option>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                </select>
 
-            </ion-item>
-        </ion-list>
+                    <div class="add-task" ng-show="isTodo()">
+                        <ion-checkbox id="toggle-all" type="checkbox" ng-model="markAll"
+                               ng-click="toggleMarkAll()"/>
+                        <label for="toggle-all">Mark all as complete</label>
+                    </div>
 
-        <form>
-            <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" ng-model-instant />
-            <button class="add-btn" ng-click="addTodo()"><h2>Add</h2></button>
-        </form>
+                    <ion-list id="todo-list" class="unstyled">
+                        <ion-item ng-repeat="todo in todos" ng-dblclick="toggleEditMode()">
+                            <div class="view" ng-keyup="editTodo()">
+                                <ion-checkbox type="checkbox" ng-model="todo.done"/>
+                                <span class="done-{{todo.done}}" >{{todo.text}}</span>
+                            </div>
+                            <input class="edit" type="text" ng-model="todo.text"
+                                   ng-keyup="editOnEnter(todo)"/>
+                        </ion-item>
+                    </ion-list>
 
-        <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
+                    <div class="todo-count">{{remaining()}} of {{todos.length}} remaining</div>
+                    <a id="clear-completed" ng-click="clear()" ng-show="hasDone()">
+                        Clear <span >{{(todos.length - remaining())}} {{itemText()}}</span>.
+                    </a>
+
+            </div>
+        </div>
     </ion-content>
 </ion-view>
