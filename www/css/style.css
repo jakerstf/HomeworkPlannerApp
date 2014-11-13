@@ -5,7 +5,7 @@ p.schedule{color:dodgerblue;}
 ===================================== */
 input.add-task{
     float: left;
-    border: 1px solid #444;
+    border: 1px solid #ccc;
     width: 70%;
     margin: 20px 15px;
     padding: 5px 8px;
@@ -17,5 +17,24 @@ button.add-button{
     color: #444;
     padding: 6px 10px;
     margin: 20px 0;
-
+}
+input.search-task{
+    border: 1px solid #ccc;
+    width: 90%;
+    margin: 20px 15px;
+    padding: 5px 8px;
+}
+label.item{
+    font-size: 14px;
+    line-height: 2.75em;
+    color: #444;
+}
+.btn-delete {
+    position: absolute;
+    top: 24%;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #cc2311;
 }

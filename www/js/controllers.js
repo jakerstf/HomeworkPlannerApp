@@ -51,18 +51,18 @@ angular.module('starter.controllers', [])
         { taskName: "Create a brand-new Resume", isDone: false }
       ];
 
-      // Add Item to Todo List
+      // Add Item
       $scope.addTodo = function () {
         $scope.todos.push({taskName : $scope.newTodo , isDone : false });
         $scope.newTodo = "";//Reset the text field.
       };
 
-      // Delete Item from Todo List
+      // Delete Item
       $scope.deleteTodo = function(item) {
-            console.log("item is: " + item);
-            var index = $scope.todos.indexOf(item);
-            console.log("index is: " + index);
-            $scope.todos.splice(index, 1);
+        console.log("item is: " + item);
+        var index = $scope.todos.indexOf(item);
+        console.log("index is: " + index);
+        $scope.todos.splice(index, 1);
        };
 })
 

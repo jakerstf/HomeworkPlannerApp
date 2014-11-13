@@ -11,10 +11,16 @@
                     <button class="add-button" ng-click="addTodo()">Add Task</button>
                 </div>
 
+                <!-- Search Input -->
+                <div class="todo-search">
+                    <label class="search-label"><span class="ion-ios7-search"> Search</span></label>
+                    <input class="search-task" ng-model="search.$">
+                </div>
+
                 <ion-list>
-                   <ion-item ng-repeat="todo in todos">
+                   <ion-item ng-repeat="todo in todos | filter:search">
                        <ion-checkbox ng-model="todo.isDone"> {{todo.taskName}}
-                       <button class="ion-minus-circled" aria-hidden="true" ng-click="deleteTodo()"></button>
+                       <button class="btn-delete ion-ios7-minus-outline"  ng-click="deleteTodo()"></button>
                    </ion-item>
                 </ion-list>
             </div>
