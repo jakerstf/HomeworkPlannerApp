@@ -44,5 +44,28 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+.controller('TodoCtrl', function($scope) {
+    $scope.todos = [
+        { taskName: "Write an Angular js Tutorial for Todo-List", isDone: false },
+        { taskName: "Update jquer.in", isDone: false },
+        { taskName: "Create a brand-new Resume", isDone: false }
+      ];
+
+      // Add Item to Todo List
+      $scope.addTodo = function () {
+        $scope.todos.push({taskName : $scope.newTodo , isDone : false });
+        $scope.newTodo = "";//Reset the text field.
+      };
+
+      // Delete Item from Todo List
+      $scope.deleteTodo = function(item) {
+            console.log("item is: " + item);
+            var index = $scope.todos.indexOf(item);
+            console.log("index is: " + index);
+            $scope.todos.splice(index, 1);
+       };
+})
+
+
+
+
