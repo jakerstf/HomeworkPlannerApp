@@ -55,4 +55,22 @@ angular.module('starter.controllers', [])
             { text: "Uncategorized", checked: false }
         ];
 
-});
+})
+
+ .controller('ToDoListCtrl', function($scope) {
+
+        $scope.data = {
+            showDelete: false
+        };
+
+        $scope.share = function(item) {
+            alert('Share Item: ' + item.id);
+        };
+
+        $scope.onItemDelete = function(item) {
+            $scope.items.splice($scope.items.indexOf(item), 1);
+        };
+
+
+    });
+
