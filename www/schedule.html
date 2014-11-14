@@ -28,22 +28,27 @@
         </div>
     </ion-header-bar>
     <ion-content>
+        <div id="parent">
+        <div id="child">
         <ion-list show-delete="data.showDelete">
 
             <ion-item ng-repeat="item in toDoListItems">
 
-                <p class="schedule">Class:</p>{{item.task}}
-                <p class="schedule">Teacher:</p>{{item.task2}}
-                <p class="schedule">Room:</p>{{item.task3}}
-                <p class="schedule">Time:</p>{{item.task4}}
-                <p class="schedule">Day of Week:</p>{{item.task5}}
-                <ion-delete-button class="ion-minus-circled"
-                                   ng-click="onItemDelete(item)">
-                </ion-delete-button>
-            </ion-item>
+            <p class="schedule">Class:</p>{{item.task}}
+            <p class="schedule">Teacher:</p>{{item.task2}}
+            <p class="schedule">Room:</p>{{item.task3}}
+            <p class="schedule">Time:</p>{{item.task4}}
+            <p class="schedule">Day of Week:</p>{{item.task5}}
+            <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)">
+            </ion-delete-button>
+        </ion-item>
 
         </ion-list>
 
+        </div>
+        </div>
+
+        <input type="button" value="Remove Element" onClick="removeElement('parent','child');">
     </ion-content>
 </ion-pane>
 <script id="modal.html" type="text/ng-template">

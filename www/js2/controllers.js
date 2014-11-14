@@ -24,7 +24,7 @@ $scope.AddItem = function(data){
 
 
 
-  
+
 $ionicModal.fromTemplateUrl('modal.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -44,10 +44,27 @@ $ionicModal.fromTemplateUrl('modal.html', {
     $scope.modal.remove();
   });
 
+    });
+
+
+//Class Schedule Removal (Javascript)
+
+function removeElement(parentDiv, childDiv){
+    if (childDiv == parentDiv) {
+        alert("There is no Class Schedule to remove.");
+    }
+    else if (document.getElementById(childDiv)) {
+        var child = document.getElementById(childDiv);
+        var parent = document.getElementById(parentDiv);
+        parent.removeChild(child);
+    }
+    else {
+        alert("Class Schedule has been removed or does not exist.");
+        return false;
+    }
+}
 
 
 
-  
-});
 
 
