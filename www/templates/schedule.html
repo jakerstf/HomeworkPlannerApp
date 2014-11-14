@@ -17,11 +17,11 @@
 
             <ion-item ng-repeat="item in toDoListItems">
 
-                <p class="schedule">Class:</p>{{item.task}}
-                <p class="schedule">Teacher:</p>{{item.task2}}
-                <p class="schedule">Room:</p>{{item.task3}}
-                <p class="schedule">Time:</p>{{item.task4}}
-                <p class="schedule">Day of Week:</p>{{item.task5}}
+                <p class="schedule">Class:<br><a class="listitem">{{item.task}}</a></p>
+                <p class="schedule">Teacher:<br><a class="listitem">{{item.task2}}</a></p>
+                <p class="schedule">Room:<br><a class="listitem">{{item.task3}}</a></p>
+                <p class="schedule">Time:<br><a class="listitem">{{item.task4}}</a></p>
+                <p class="schedule">Days of Week:<br><a class="listitem">{{item.task5}}</a></p>
                 <ion-delete-button class="ion-minus-circled"
                                    ng-click="onItemDelete(item)">
                 </ion-delete-button>
@@ -43,23 +43,23 @@
                 <div class="list">
                     <div class="list list-inset">
                         <label class="item item-input" ng-model="data.newItem">
-                            <input type="text" placeholder="Class Name: DGM 3790 | Rich Internet Applications I" ng-model="data.newItem">
+                            Class Name: <input type="text" placeholder="DGM 3790 | Rich Internet Applications I" ng-model="data.newItem">
                         </label>
                         <label class="item item-input">
-                            <input type="text" placeholder="Teacher's Name: Thor Anderson" ng-model="data.newItem2">
+                            Teacher's Name: <input type="text" placeholder="Thor Anderson" ng-model="data.newItem2">
                         </label>
                         <label class="item item-input">
-                            <input type="text" placeholder="Classroom Number: CS 715b" ng-model="data.newItem3">
+                            Classroom Number: <input type="text" placeholder="CS 715b" ng-model="data.newItem3">
                         </label>
                         <label class="item item-input">
-                            <input type="time" placeholder="Class Time: 8:30 AM" ng-model="data.newItem4">
+                            Class Time: <input type="time" placeholder="8:30 AM" ng-model="data.newItem4">
                         </label>
                         <label class="item item-input item-select">
                             <div class="input-label">
                                 Days of Class
                             </div>
                             <select ng-model="data.newItem5">
-                                <option>Monday, Wednesday</option>
+                                <option selected>Monday, Wednesday</option>
                                 <option>Tuesday, Thursday</option>
                             </select>
                         </label>

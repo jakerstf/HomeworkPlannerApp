@@ -1,2 +1,8 @@
 /* Empty. Add your own CSS if you like */
 p.schedule{color:dodgerblue;}
+
+/*Class Schedule Style*/
+.item.item-input, .input-label{color:deepskyblue;}
+
+.listitem{color:black;}
+
