@@ -2,19 +2,28 @@
     <ion-nav-buttons side="left">
         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
     </ion-nav-buttons>
-    <ion-content class="has-header" ng-controller="TodoCtrl">
-        <ion-list>
-            <ion-item ng-repeat="todo in todos">
-                <ion-checkbox ng-model="todo.done"><span class="done-{{todo.done}}">{{todo.text}}</span></ion-checkbox>
+    <ion-content class="has-header">
+        <div>
+            <div id="todoapp" ng-controller="TodoCtrl">
 
-            </ion-item>
-        </ion-list>
+                <div class="todo-input clearfix">
+                    <input type="text" class="add-task" ng-model="newTodo">
+                    <button class="add-button" ng-click="addTodo()">Add Task</button>
+                </div>
 
-        <form>
-            <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" ng-model-instant />
-            <button class="add-btn" ng-click="addTodo()"><h2>Add</h2></button>
-        </form>
+                <!-- Search Input -->
+                <div class="todo-search">
+                    <label class="search-label"><span class="ion-ios7-search"> Search</span></label>
+                    <input class="search-task" ng-model="search.$">
+                </div>
 
-        <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
+                <ion-list>
+                    <ion-item ng-repeat="todo in todos | filter:search">
+                        <ion-checkbox ng-model="todo.isDone"> {{todo.taskName}}
+                            <button class="btn-delete ion-ios7-minus-outline"  ng-click="deleteTodo()"></button>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
     </ion-content>
 </ion-view>

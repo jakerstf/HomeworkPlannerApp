@@ -75,6 +75,25 @@ angular.module('starter.controllers', [])
 
 })
 
+    .controller('TodoCtrl', function($scope) {
+        $scope.todos = [
+            { taskName: "Write an Angular js Tutorial for Todo-List", isDone: false },
+            { taskName: "Update jquer.in", isDone: false },
+            { taskName: "Create a brand-new Resume", isDone: false }
+        ];
+
+        // Add Item
+        $scope.addTodo = function () {
+            $scope.todos.push({taskName : $scope.newTodo , isDone : false });
+            $scope.newTodo = "";//Reset the text field.
+        };
+
+        // Delete Item
+        $scope.deleteTodo = function(item) {
+            $scope.todos.splice($scope.todos.indexof(item), 1);
+        };
+    })
+
     .controller('ToDoListCtrl', function($scope,$ionicModal) {
         $scope.toDoListItems = [{
 
