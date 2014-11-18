@@ -14,13 +14,50 @@
 
 
 
+<ion-toggle ng-model="dayView.checked" ng-change="dayViewChange()" toggle-class="toggle-calm">View Today</ion-toggle>
 
-<ion-toggle ng-model="dayView" toggle-class="toggle-calm">View Today</ion-toggle>
-
-<div id="wrapOverall">
+<div id="wrapOverall" ng-show="dayView.checked">
     <header>
         <h1>Today</h1>
     </header>
+
+    <div class="list card">
+
+        <div class="item item-avatar">
+            <img src="../img/mcfly.jpg">
+            <h2>Prof. McFly</h2>
+            <p>DGM 4990 Future Technologies</p>
+        </div>
+
+        <div class="item item-body">
+            <h2>Assignment Details:</h2>
+            <p>
+                Read Chapter 10: Hoverboard Basics and prepare for the quiz at the beginning of
+                class. Also, turn in your Hoverboard designs and prototype for mid-term grades. For
+                extra credit you can also submit your Delorean blueprints if ready.
+            </p>
+            <p>
+                <a href="#" class="subdued">Due at 11:30 AM</a>
+            </p>
+        </div>
+
+        <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#">
+                <i class="icon ion-checkmark"></i>
+                Finished
+            </a>
+            <a class="tab-item" href="#">
+                <i class="icon ion-chatbox"></i>
+                Notes
+            </a>
+            <a class="tab-item" href="#">
+                <i class="icon ion-share"></i>
+                Turned In
+            </a>
+        </div>
+
+    </div>
+
     <div id="calendar">
         <table>
             <div id="month">
@@ -41,12 +78,29 @@
 </div>
 <!-- WRAP OPVERALL -->
 
-<ion-toggle ng-model="weekView" toggle-class="toggle-calm">View Week</ion-toggle>
+    <div id="clear"></div>
 
-<div id="wrapOverall">
+
+
+<ion-toggle ng-model="weekView.checked" ng-change="weekViewChange()" toggle-class="toggle-calm" id="clear">View Week</ion-toggle>
+
+<div id="wrapOverall" ng-show="weekView.checked">
     <header>
         <h1>Week View</h1>
     </header>
+
+    <div class="card">
+        <div class="item item-divider">
+            DGM 4990
+        </div>
+        <div class="item item-text-wrap">
+            Chapter 10 Quiz. Turn in Mid-Term Project. Extra Credit if ready.
+        </div>
+        <div class="item item-divider">
+            Due Today at 11:30 AM
+        </div>
+    </div>
+
     <div id="calendar">
         <table>
             <div id="month">
@@ -79,12 +133,62 @@
 </div>
 <!-- WRAP OPVERALL -->
 
-<ion-toggle ng-model="monthView" toggle-class="toggle-calm">View Month</ion-toggle>
+<div class="card" ng-show="weekView.checked">
+    <div class="item item-divider">
+        DGM 5050
+    </div>
+    <div class="item item-text-wrap">
+        Interdimensional Travel Thesis Due
+    </div>
+    <div class="item item-divider">
+        Due Friday at 11:59 PM
+    </div>
+</div>
 
-<div id="wrapOverall">
+<div id="clear"></div>
+
+<div ng-controller="MonthCtrl">
+
+<ion-toggle ng-model="monthView.checked" ng-change="monthViewChange()" toggle-class="toggle-calm" id="clear">View Month</ion-toggle>
+
+<div id="wrapOverall" ng-show="monthView.checked">
     <header>
         <h1>Month View</h1>
     </header>
+
+    <div class="list card">
+
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-document-text"></i>
+            DGM 4990 Quiz 10
+        </a>
+
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-clipboard"></i>
+            DGM 4990 Mid-Term Project
+        </a>
+
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-clipboard"></i>
+            DGM 4990 Extra-Credit Project
+        </a>
+
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-document"></i>
+            DGM 5050 Interdimensional Travel Thesis
+        </a>
+
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-document"></i>
+            DGM 5060 Planet Colonization Assignment
+        </a>
+
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-document-text"></i>
+            DGM 4570 Holographic Imagery Test
+        </a>
+
+    </div>
 
     <div id="calendar">
         <table>
@@ -164,6 +268,9 @@
 </div>
 <!-- WRAP OPVERALL -->
 
+    <div id="clear"></div>
+
+</div><!-- MonthCtrl -->
 
 <div class="list" ng-controller="CalendarCtrl">
 
@@ -181,14 +288,6 @@
 
 </div>
 
-
-
-
-
 </ion-content>
-
-
-</body>
-
 
 </ion-view>

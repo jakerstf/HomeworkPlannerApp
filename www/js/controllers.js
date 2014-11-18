@@ -44,8 +44,26 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-})
+    .controller('DayCtrl', function($scope) {
+        $scope.dayViewChange = function() {
+            console.log($scope.dayView.checked);
+        };
+
+    })
+
+    .controller('WeekCtrl', function($scope) {
+        $scope.weekViewChange = function() {
+            console.log($scope.weekView.checked);
+        };
+
+    })
+
+    .controller('MonthCtrl', function($scope) {
+        $scope.monthViewChange = function() {
+            console.log($scope.monthView.checked);
+        };
+
+    })
 
 .controller('CalendarCtrl', function($scope) {
 
