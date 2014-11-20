@@ -36,10 +36,19 @@ label.item{
 }
 .btn-delete {
     position: absolute;
-    top: 24%;
+    top: 25%;
     right: 15px;
     font-size: 24px;
     background: none;
     border: none;
     color: #cc2311;
+    z-index: 900;
+}
+.todoList .item{
+    position: relative;
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #ccc;
 }

@@ -89,8 +89,8 @@ angular.module('starter.controllers', [])
         };
 
         // Delete Item
-        $scope.deleteTodo = function(item) {
-            $scope.todos.splice($scope.todos.indexof(item), 1);
+        $scope.removeTask = function($index) {
+            $scope.todos.splice($index, 1);
         };
     })
 
