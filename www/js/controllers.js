@@ -75,18 +75,44 @@ angular.module('starter.controllers', [])
 
 })
 
-    .controller('TodoCtrl', function($scope) {
+    .controller('TodoCtrl', function($scope,$ionicModal) {
         $scope.todos = [
-            { taskName: "Write an Angular js Tutorial for Todo-List", isDone: false },
-            { taskName: "Update jquer.in", isDone: false },
-            { taskName: "Create a brand-new Resume", isDone: false }
+            { taskName: "Task With Priority Level 1",
+              priority: "high",
+              isDone: false },
+            { taskName: "Update jquer.in",
+              priority: "medium",
+              isDone: false },
+            { taskName: "Create a brand-new Resume",
+              priority: "low",
+              isDone: false }
         ];
 
         // Add Item
-        $scope.addTodo = function () {
-            $scope.todos.push({taskName : $scope.newTodo , isDone : false });
-            $scope.newTodo = "";//Reset the text field.
+        $scope.addTodo = function (data) {
+            $scope.todos.push({taskName:data.newTodo, priority: data.taskPriority , isDone : false });
+            data.newTodo = "";//Reset the text field.
+            $scope.closeModal();
         };
+
+        $ionicModal.fromTemplateUrl('modal.html', {
+            scope: $scope,
+            animation: 'slide-in-up'
+        }).then(function(modal) {
+            $scope.modal = modal;
+        });
+
+        $scope.openModal = function() {
+            $scope.modal.show();
+        };
+        $scope.closeModal = function() {
+            $scope.modal.hide();
+        };
+
+        //Cleanup the modal when we're done with it!
+        $scope.$on('$destroy', function() {
+            $scope.modal.remove();
+        });
 
         // Delete Item
         $scope.removeTask = function($index) {

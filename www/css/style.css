@@ -9,24 +9,68 @@ p.schedule{color:dodgerblue;}
 /* To-do List Styles
 ===================================== */
 input.add-task{
-    float: left;
     border: 1px solid #ccc;
-    width: 70%;
+    border-radius: 5px;
+    width: 50%;
+    color: #444;
     margin: 20px 15px;
     padding: 5px 8px;
 }
+input.add-task:focus{border-color: #145fd7;}
+select.taskRank{
+    width: 25%;
+    padding: 10px 0;
+    margin: 0 15px;
+}
 button.add-button{
-    float: left;
     background: none;
-    border: 1px solid #444;
-    color: #444;
+    border: 1px solid #145fd7;
+    border-radius: 5px;
+    color: #145fd7;
     padding: 6px 10px;
-    margin: 20px 0;
+    margin: 20px 15px;
+}
+.todo-search{
+    background: #43cee6;
+    width: 100%;
+    padding: 20px 10px;
+}
+.priority-label{
+    font-weight: bold;
+    font-size: 13px;
+    color: #444;
+}
+span.high{
+    display: inline-block;
+    background: url("../img/priority-high.png") no-repeat;
+    width: 75px;
+    height: 18px;
+    margin: 0 0 -5px 0;
+}
+span.medium{
+    display: inline-block;
+    background: url("../img/priority-med.png") no-repeat;
+    width: 75px;
+    height: 18px;
+    margin: 0 0 -5px 0;
+}
+span.low{
+    display: inline-block;
+    background: url("../img/priority-low.png") no-repeat;
+    width: 75px;
+    height: 18px;
+    margin: 0 0 -5px 0;
+}
+span.dolater{
+    display: inline-block;
+    background: url("../img/priority-dolater.png") no-repeat;
+    width: 75px;
+    height: 18px;
+    margin: 0 0 -5px 0;
 }
 input.search-task{
-    border: 1px solid #ccc;
-    width: 90%;
-    margin: 20px 15px;
+    border: 0;
+    border-radius: 5px;
     padding: 5px 8px;
 }
 label.item{
