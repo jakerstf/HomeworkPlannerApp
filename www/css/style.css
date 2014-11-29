@@ -1,0 +1,98 @@
+/* Empty. Add your own CSS if you like */
+p.schedule{color:dodgerblue;}
+
+/*Class Schedule Style*/
+.item.item-input, .input-label{color:deepskyblue;}
+
+.listitem{color:black;}
+
+/* To-do List Styles
+===================================== */
+input.add-task{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    color: #444;
+    margin: 20px 15px;
+    padding: 5px 8px;
+}
+input.add-task:focus{border-color: #145fd7;}
+select.taskRank{
+    width: 25%;
+    padding: 10px 0;
+    margin: 0 15px;
+}
+button.add-button{
+    background: none;
+    border: 1px solid #145fd7;
+    border-radius: 5px;
+    color: #145fd7;
+    padding: 6px 10px;
+    margin: 20px 15px;
+}
+.todo-search{
+    background: #43cee6;
+    width: 100%;
+    padding: 20px 10px;
+}
+.priority-label{
+    font-weight: bold;
+    font-size: 13px;
+    color: #444;
+}
+span.high{
+    display: inline-block;
+    background: url("../img/priority-high.png") no-repeat;
+    width: 75px;
+    height: 18px;
+    margin: 0 0 -5px 0;
+}
+span.medium{
+    display: inline-block;
+    background: url("../img/priority-med.png") no-repeat;
+    width: 75px;
+    height: 18px;
+    margin: 0 0 -5px 0;
+}
+span.low{
+    display: inline-block;
+    background: url("../img/priority-low.png") no-repeat;
+    width: 75px;
+    height: 18px;
+    margin: 0 0 -5px 0;
+}
+span.dolater{
+    display: inline-block;
+    background: url("../img/priority-dolater.png") no-repeat;
+    width: 75px;
+    height: 18px;
+    margin: 0 0 -5px 0;
+}
+input.search-task{
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+label.item{
+    font-size: 14px;
+    line-height: 2.75em;
+    color: #444;
+}
+.btn-delete {
+    position: absolute;
+    top: 25%;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #cc2311;
+    z-index: 900;
+}
+.todoList .item{
+    position: relative;
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #ccc;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js2/app.js"></script>
+    <script src="js2/controllers.js"></script>
+</head>
+<body ng-app="app" ng-controller="ToDoListCtrl">
+<ion-pane>
+    <ion-header-bar align-title="center" class="bar-dark">
+        <button class="button button-icon icon ion-ios7-minus-outline"
+                ng-click="data.showDelete = !data.showDelete;"></button>
+        <h1 class="title">Class Schedule</h1>
+        <div class="buttons">
+            <button class="button-balanced" ng-click="openModal()">+ Add Class</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div id="parent">
+        <div id="child">
+        <ion-list show-delete="data.showDelete">
+
+            <ion-item ng-repeat="item in toDoListItems">
+
+            <p class="schedule">Class:</p>{{item.task}}
+            <p class="schedule">Teacher:</p>{{item.task2}}
+            <p class="schedule">Room:</p>{{item.task3}}
+            <p class="schedule">Time:</p>{{item.task4}}
+            <p class="schedule">Day of Week:</p>{{item.task5}}
+            <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)">
+            </ion-delete-button>
+        </ion-item>
+
+        </ion-list>
+
+        </div>
+        </div>
+
+        <input type="button" value="Remove Element" onClick="removeElement('parent','child');">
+    </ion-content>
+</ion-pane>
+<script id="modal.html" type="text/ng-template">
+    <div class="modal">
+        <div class="bar bar-header bar-calm">
+            <button class="button" ng-click="closeModal()">back</button>
+            <h1 class="title">Add Your Class Schedule</h1>
+        </div>
+        <br></br>
+        <br></br>
+        <form ng-submit="AddItem(data)">
+            <div class="list">
+                <div class="list list-inset">
+                    <label class="item item-input" ng-model="data.newItem">
+                        <input type="text" placeholder="Class Name: DGM 3790 | Rich Internet Applications I" ng-model="data.newItem">
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" placeholder="Teacher's Name: Thor Anderson" ng-model="data.newItem2">
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" placeholder="Classroom Number: CS 715b" ng-model="data.newItem3">
+                    </label>
+                    <label class="item item-input">
+                        <input type="time" placeholder="Class Time: 8:30 AM" ng-model="data.newItem4">
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Days of Class
+                        </div>
+                        <select ng-model="data.newItem5">
+                            <option>Monday, Wednesday</option>
+                            <option>Tuesday, Thursday</option>
+                        </select>
+                    </label>
+
+                </div>
+                <button class="button button-block button-positive" type="submit">
+                   + Add Class
+                </button>
+            </div>
+        </form>
+    </div>
+</script>
+
+
+
+</body>
+<div class="bar bar-footer">
+    <form action="index.html">
+        <button class="button icon-left ion-home button-dark">Home</button>
+    </form>
+
+
+</div>
+</html>

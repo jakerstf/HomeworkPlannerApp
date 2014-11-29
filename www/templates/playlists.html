@@ -1,0 +1,37 @@
+<ion-view title="Welcome">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <h1>Welcome to HomeworkPlanner!</h1>
+      <p>With this app, you can...</p>
+      <ion-list>
+
+
+       <ion-item ng-repeat="todos in todos">
+              {{todos.id}} {{todos.taskName}} </br> {{todos.priority}}
+           </ion-item>
+
+
+
+          <li ng-repeat="ViewToday in ViewToday">{{ViewToday}}</li>
+     </ion-list>
+      <p>Swipe to the right to bring out the menu!</p>
+
+      <ion-list>
+
+          <div ng-controller="PlaylistCtrl">
+          <ion-item ng-repeat="playlist in playlists">
+              {{playlist.title}}
+              </ion-item>
+          </div>
+
+          <div ng-controller="homeCtrl">
+
+              <li ng-repeat="friends in friends">{{friends.name}}</li>
+
+          </div>
+
+      </ion-list>
+  </ion-content>
+</ion-view>

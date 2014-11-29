@@ -1,0 +1,293 @@
+<ion-view title="Calendar">
+<ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+</ion-nav-buttons>
+<ion-content class="has-header">
+
+<head>
+    <meta charset="utf-8">
+    <title>Calendar</title>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100,200,300,500,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../css/calendarTest.css">
+</head>
+
+
+
+<ion-toggle ng-model="dayView.checked" ng-change="dayViewChange()" toggle-class="toggle-calm">View Today</ion-toggle>
+
+<div id="wrapOverall" ng-show="dayView.checked">
+    <header>
+        <h1>Today</h1>
+    </header>
+
+    <div class="list card">
+
+        <div class="item item-avatar">
+            <img src="../img/mcfly.jpg">
+            <h2>Prof. McFly</h2>
+            <p>DGM 4990 Future Technologies</p>
+        </div>
+
+        <div class="item item-body">
+            <h2>Assignment Details:</h2>
+            <p>
+                Read Chapter 10: Hoverboard Basics and prepare for the quiz at the beginning of
+                class. Also, turn in your Hoverboard designs and prototype for mid-term grades. For
+                extra credit you can also submit your Delorean blueprints if ready.
+            </p>
+            <p>
+                <a href="#" class="subdued">Due at 11:30 AM</a>
+            </p>
+        </div>
+
+        <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#">
+                <i class="icon ion-checkmark"></i>
+                Finished
+            </a>
+            <a class="tab-item" href="#">
+                <i class="icon ion-chatbox"></i>
+                Notes
+            </a>
+            <a class="tab-item" href="#">
+                <i class="icon ion-share"></i>
+                Turned In
+            </a>
+        </div>
+
+    </div>
+
+    <div id="calendar">
+        <table>
+            <div id="month">
+                <th class="month" colspan="1">Nov</th>
+            </div>
+            <!-- MONTH -->
+            <div id="weeks">
+                <tr class="weeks">
+                    <td>TUE</td>
+                <tr class="week2">
+                    <td class="days">4</td>
+                </tr>
+            </div>
+            <!-- DAYS -->
+        </table>
+    </div>
+    <!-- CALENDAR -->
+</div>
+<!-- WRAP OPVERALL -->
+
+    <div id="clear"></div>
+
+
+
+<ion-toggle ng-model="weekView.checked" ng-change="weekViewChange()" toggle-class="toggle-calm" id="clear">View Week</ion-toggle>
+
+<div id="wrapOverall" ng-show="weekView.checked">
+    <header>
+        <h1>Week View</h1>
+    </header>
+
+    <div class="card">
+        <div class="item item-divider">
+            DGM 4990
+        </div>
+        <div class="item item-text-wrap">
+            Chapter 10 Quiz. Turn in Mid-Term Project. Extra Credit if ready.
+        </div>
+        <div class="item item-divider">
+            Due Today at 11:30 AM
+        </div>
+    </div>
+
+    <div id="calendar">
+        <table>
+            <div id="month">
+                <th class="month" colspan="7">November</th>
+            </div>
+            <!-- MONTH -->
+            <div id="weeks">
+                <tr class="weeks">
+                    <td>SUN</td>
+                    <td>MON</td>
+                    <td>TUE</td>
+                    <td>WED</td>
+                    <td>THU</td>
+                    <td>FRI</td>
+                    <td>SAT</td>
+                <tr class="week2">
+                    <td class="days">3</td>
+                    <td class="days">4</td>
+                    <td class="days">5</td>
+                    <td class="days">6</td>
+                    <td class="days">7</td>
+                    <td class="days">8</td>
+                    <td class="days">9</td>
+                </tr>
+            </div>
+            <!-- DAYS -->
+        </table>
+    </div>
+    <!-- CALENDAR -->
+</div>
+<!-- WRAP OPVERALL -->
+
+<div class="card" ng-show="weekView.checked">
+    <div class="item item-divider">
+        DGM 5050
+    </div>
+    <div class="item item-text-wrap">
+        Interdimensional Travel Thesis Due
+    </div>
+    <div class="item item-divider">
+        Due Friday at 11:59 PM
+    </div>
+</div>
+
+<div id="clear"></div>
+
+<div ng-controller="MonthCtrl">
+
+<ion-toggle ng-model="monthView.checked" ng-change="monthViewChange()" toggle-class="toggle-calm" id="clear">View Month</ion-toggle>
+
+<div id="wrapOverall" ng-show="monthView.checked">
+    <header>
+        <h1>Month View</h1>
+    </header>
+
+    <div class="list card">
+
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-document-text"></i>
+            DGM 4990 Quiz 10
+        </a>
+
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-clipboard"></i>
+            DGM 4990 Mid-Term Project
+        </a>
+
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-clipboard"></i>
+            DGM 4990 Extra-Credit Project
+        </a>
+
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-document"></i>
+            DGM 5050 Interdimensional Travel Thesis
+        </a>
+
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-document"></i>
+            DGM 5060 Planet Colonization Assignment
+        </a>
+
+        <a href="#" class="item item-icon-left">
+            <i class="icon ion-document-text"></i>
+            DGM 4570 Holographic Imagery Test
+        </a>
+
+    </div>
+
+    <div id="calendar">
+        <table>
+            <div id="month">
+                <th class="month" colspan="7">November</th>
+            </div>
+            <!-- MONTH -->
+
+            <div id="weeks">
+                <tr class="weeks">
+                    <td>SUN</td>
+                    <td>MON</td>
+                    <td>TUE</td>
+                    <td>WED</td>
+                    <td>THU</td>
+                    <td>FRI</td>
+                    <td>SAT</td>
+                </tr>
+            </div>
+            <!-- WEEKS -->
+
+            <div id="days">
+                <tr class="week1">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="days">1</td>
+                    <td class="days">2</td>
+                </tr>
+
+                <tr class="week2">
+                    <td class="days">3</td>
+                    <td class="days">4</td>
+                    <td class="days">5</td>
+                    <td class="days">6</td>
+                    <td class="days">7</td>
+                    <td class="days">8</td>
+                    <td class="days">9</td>
+                </tr>
+
+                <tr class="week3">
+                    <td class="days">10</td>
+                    <td class="days">11</td>
+                    <td class="days">12</td>
+                    <td class="days">13</td>
+                    <td class="days">14</td>
+                    <td class="days">15</td>
+                    <td class="days">16</td>
+                </tr>
+
+                <tr class="week4">
+                    <td class="days">17</td>
+                    <td class="days">18</td>
+                    <td class="days">19</td>
+                    <td class="days">20</td>
+                    <td class="days">21</td>
+                    <td class="days">22</td>
+                    <td class="days">23</td>
+                </tr>
+
+                <tr class="week5">
+                    <td class="days">24</td>
+                    <td class="days">25</td>
+                    <td class="days">26</td>
+                    <td class="days">27</td>
+                    <td class="days">28</td>
+                    <td class="days">29</td>
+                    <td class="days">30</td>
+                </tr>
+            </div>
+            <!-- DAYS -->
+        </table>
+    </div>
+    <!-- CALENDAR -->
+</div>
+<!-- WRAP OPVERALL -->
+
+    <div id="clear"></div>
+
+</div><!-- MonthCtrl -->
+
+<div class="list" ng-controller="CalendarCtrl">
+
+    <div class="item item-divider">
+        Other Views
+    </div>
+
+    <ion-toggle ng-repeat="item in settingsList" ng-model="item.checked" ng-checked="item.checked">
+        {{ item.text }}
+    </ion-toggle>
+
+    <!--<div class="item">
+        <pre ng-bind="pastAssignments | json"></pre>
+    </div>-->
+
+</div>
+
+</ion-content>
+
+</ion-view>

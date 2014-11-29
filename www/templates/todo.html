@@ -1,0 +1,54 @@
+<ion-view title="To Do List" ng-controller="TodoCtrl">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button icon-right ion-ios7-plus-outline button-stable" ng-click="openModal()"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div>
+            <div id="todoapp">
+                <!-- Search Input -->
+                <div class="todo-search">
+                  <form>
+                    <input class="search-task" placeholder="Search Task" ng-model="search.$">
+                  </form>
+                </div>
+
+                <ion-list class="todoList">
+                    <ion-item ng-repeat="todo in todos | filter:search">
+                        <ion-checkbox ng-model="todo.isDone"> {{todo.taskName}} <br>
+                         <span class="priority-label">Priority</span>
+                         <span class='{{todo.priority}}' title='{{todo.priority}}'></span></ion-checkbox>
+                        <button class="ion-minus-circled btn-delete" ng-click="removeTask($index)"></button>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+    </ion-content>
+
+    <script id="modal.html" type="text/ng-template">
+    <div class="modal">
+        <div class="bar bar-header bar-calm">
+          <button class="button" ng-click="closeModal()">Back</button>
+          <h1 class="title">Add New Task</h1>
+        </div>
+        <br/>
+        <br/>
+        <div class="todo-input clearfix">
+            <form class="createTask">
+                <input type="text" placeholder="New Task" class="add-task" ng-model="data.newTodo">
+                <select class="taskRank" ng-model="data.taskPriority">
+                    <option value="">Priority</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                    <option value="dolater">Do Later</option>
+                </select><br/>
+                <button class="add-button" ng-click="addTodo(data)">Add Task</button>
+            </form>
+        </div>
+    </div>
+    </script>
+
+</ion-view>
