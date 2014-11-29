@@ -33,7 +33,11 @@ angular.module('starter.controllers', [])
   };
 })
 
+<<<<<<< HEAD
 .controller('PlaylistCtrl', function($scope,$ionicModal) {
+=======
+.controller('PlaylistsCtrl', function($scope) {
+>>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
   $scope.playlists = [
     { title: 'Log in to Your Profile', id: 1 },
     { title: 'View Calendar', id: 2 },
@@ -76,6 +80,7 @@ angular.module('starter.controllers', [])
 })
 
     .controller('TodoCtrl', function($scope,$ionicModal) {
+<<<<<<< HEAD
             $scope.todos = [
                 { taskName: "Task With Priority Level 1",
                     id: 1,
@@ -92,6 +97,19 @@ angular.module('starter.controllers', [])
             ];
 
 
+=======
+        $scope.todos = [
+            { taskName: "Task With Priority Level 1",
+              priority: "high",
+              isDone: false },
+            { taskName: "Update jquer.in",
+              priority: "medium",
+              isDone: false },
+            { taskName: "Create a brand-new Resume",
+              priority: "low",
+              isDone: false }
+        ];
+>>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
 
         // Add Item
         $scope.addTodo = function (data) {
