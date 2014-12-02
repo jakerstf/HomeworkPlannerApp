@@ -33,19 +33,19 @@ angular.module('starter.controllers', [])
   };
 })
 
-<<<<<<< HEAD
-.controller('PlaylistCtrl', function($scope,$ionicModal) {
-=======
+//<<<<<<< HEAD
+//.controller('PlaylistCtrl', function($scope,$ionicModal) {
+//=======
 .controller('PlaylistsCtrl', function($scope) {
->>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
-  $scope.playlists = [
-    { title: 'Log in to Your Profile', id: 1 },
-    { title: 'View Calendar', id: 2 },
-    { title: 'Check Schedule', id: 3 },
-    { title: 'Create a To-Do List', id: 4 },
-    { title: 'Manage Tasks', id: 5 },
-    { title: 'And more!', id: 6 }
-  ];
+//>>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
+    $scope.playlists = [
+        { title: 'Log in to Your Profile', id: 1 },
+        { title: 'View Calendar', id: 2 },
+        { title: 'Check Schedule', id: 3 },
+        { title: 'Create a To-Do List', id: 4 },
+        { title: 'Manage Tasks', id: 5 },
+        { title: 'And more!', id: 6 }
+    ];
 })
 
     .controller('DayCtrl', function($scope) {
@@ -69,7 +69,7 @@ angular.module('starter.controllers', [])
 
     })
 
-.controller('CalendarCtrl', function($scope) {
+    .controller('CalendarCtrl', function($scope) {
 
         $scope.settingsList = [
             { text: "Past Assignments", checked: false },
@@ -77,39 +77,39 @@ angular.module('starter.controllers', [])
             { text: "Uncategorized", checked: false }
         ];
 
-})
+    })
 
     .controller('TodoCtrl', function($scope,$ionicModal) {
-<<<<<<< HEAD
-            $scope.todos = [
-                { taskName: "Task With Priority Level 1",
-                    id: 1,
-                    priority: "high",
-                    isDone: false },
-                { taskName: "Update jquer.in",
-                    id: 2,
-                    priority: "medium",
-                    isDone: false },
-                { taskName: "Create a brand-new Resume",
-                    id: 3,
-                    priority: "low",
-                    isDone: false }
-            ];
-
-
-=======
+//<<<<<<< HEAD
         $scope.todos = [
             { taskName: "Task With Priority Level 1",
-              priority: "high",
-              isDone: false },
+                id: 1,
+                priority: "high",
+                isDone: false },
             { taskName: "Update jquer.in",
-              priority: "medium",
-              isDone: false },
+                id: 2,
+                priority: "medium",
+                isDone: false },
             { taskName: "Create a brand-new Resume",
-              priority: "low",
-              isDone: false }
+                id: 3,
+                priority: "low",
+                isDone: false }
         ];
->>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
+
+
+//=======
+        $scope.todos = [
+            { taskName: "Task With Priority Level 1",
+                priority: "high",
+                isDone: false },
+            { taskName: "Update jquer.in",
+                priority: "medium",
+                isDone: false },
+            { taskName: "Create a brand-new Resume",
+                priority: "low",
+                isDone: false }
+        ];
+//>>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
 
         // Add Item
         $scope.addTodo = function (data) {
@@ -211,4 +211,3 @@ angular.module('starter.controllers', [])
 
 
     });
-

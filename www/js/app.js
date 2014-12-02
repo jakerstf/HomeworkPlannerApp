@@ -65,7 +65,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           }
       })
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
 
 
@@ -102,48 +102,37 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 
 
+//=======
+//>>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
+            .state('app.playlists', {
+                url: "/playlists",
+                views: {
+                    'menuContent' :{
+                        templateUrl: "templates/playlists.html",
+//<<<<<<< HEAD
+                        // controller: 'TodoCtrl'
 
+//=======
+                        controller: 'PlaylistsCtrl'
+//>>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
+                    }
+                }
+            })
 
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
-    .state('app.playlists', {
-      url: "/playlists",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/playlists.html",
-<<<<<<< HEAD
-          controller: 'TodoCtrl'
-
-=======
-          controller: 'PlaylistsCtrl'
->>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
-        }
-      }
-    })
-
-    .state('app.single', {
-      url: "/playlists/:playlistId",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/playlist.html",
-          controller: 'PlaylistCtrl'
-        }
-      }
-    });
-  // if none of the above states are matched, use this as the fallback
-<<<<<<< HEAD
-  $urlRouterProvider.otherwise('/app/welcome');
-=======
-  $urlRouterProvider.otherwise('/app/playlists');
->>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
+//      .state('app.single', {
+  //        url: "/playlists/:playlistId",
+    //      views: {
+      //        'menuContent' :{
+        //          templateUrl: "templates/playlist.html",
+          //        controller: 'PlaylistCtrl'
+            //  }
+         // }
+     // });
+        // if none of the above states are matched, use this as the fallback
+//<<<<<<< HEAD
+        $urlRouterProvider.otherwise('/app/welcome');
+//=======
+        $urlRouterProvider.otherwise('/app/welcome');
+//>>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
 });
 
