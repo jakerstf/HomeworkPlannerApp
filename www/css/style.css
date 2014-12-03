@@ -97,7 +97,7 @@ label.item{
     border-bottom: 1px solid #ccc;
 }
 
-/*CSS for Map - Jake*/
+/*CSS for Schedule Map - Jake*/
 
 .zoom-pane {
     width: 100%;
@@ -141,3 +141,15 @@ label.item{
     width: 100%;
     vertical-align: middle;
 }
+
+/*CSS for Schedule alignment - Jake*/
+
+
+.item.scheduleitem{
+    padding-top: 40px;
+}
+
+
+
+
+
