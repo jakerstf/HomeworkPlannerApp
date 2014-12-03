@@ -16,7 +16,7 @@
 
         <ion-list show-delete="data.showDelete">
 
-            <ion-item class="no" ng-repeat="item in toDoListItems">
+            <ion-item class="scheduleitem" ng-repeat="item in toDoListItems" ng-show="!$first">
 
                 <p class="schedule">Class:<br><a class="listitem">{{item.task}}</a></p>
                 <p class="schedule">Teacher:<br><a class="listitem">{{item.task2}}</a></p>
@@ -47,7 +47,7 @@
                             Class Name: <input type="text" placeholder="DGM 3790 | Rich Internet Applications I" ng-model="data.newItem">
                         </label>
                         <label class="item item-input">
-                            Teacher's Name: <input type="text" placeholder="Thor Anderson" ng-model="data.newItem2">
+                            Teacher's Name: <input type="text" placeholder="Thor Anderson" ng-model="data.newItem2" required="">
                         </label>
                         <label class="item item-input">
                             Classroom Number: <input type="text" placeholder="CS 715b" ng-model="data.newItem3">
