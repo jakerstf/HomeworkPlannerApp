@@ -9,13 +9,14 @@
                     ng-click="data.showDelete = !data.showDelete;"></button>
             <h1 class="title"></h1>
             <div class="buttons">
+                <button class="button icon-left ion-map button-stable" ng-click="openModal2()"></button>
                 <button class="button icon-left ion-ios7-plus-outline button-stable" ng-click="openModal()">Add Class</button>
             </div>
         </ion-header-bar>
 
         <ion-list show-delete="data.showDelete">
 
-            <ion-item ng-repeat="item in toDoListItems">
+            <ion-item class="no" ng-repeat="item in toDoListItems">
 
                 <p class="schedule">Class:<br><a class="listitem">{{item.task}}</a></p>
                 <p class="schedule">Teacher:<br><a class="listitem">{{item.task2}}</a></p>
@@ -71,6 +72,24 @@
                 </div>
             </form>
         </div>
+    </script>
+
+    <!--Jake Adding Modal 2-->
+
+    <script id="modal2.html" type="text/ng-template">
+        <ion-modal-view>
+            <ion-header-bar class="bar bar-header bar-stable">
+                <h1 class="title">School Map</h1>
+                <button class="button button-clear button-primary" ng-click="modal2.hide()">Close</button>
+            </ion-header-bar>
+            <ion-content class="padding" scroll="false">
+
+                <ion-scroll zooming="true" direction="xy" delegate-handle="zoom-pane" class="zoom-pane" min-zoom="1" scrollbar-x="false" scrollbar-y="false">
+                    <img ng-src="{{imageSrc}}">
+                </ion-scroll>
+
+            </ion-content>
+        </ion-modal-view>
     </script>
 
 </ion-view>

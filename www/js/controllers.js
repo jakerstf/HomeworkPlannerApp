@@ -193,6 +193,30 @@ angular.module('starter.controllers', [])
             $scope.modal.remove();
         });
 
+        //Jake AddingModal2 for MAP
+        $ionicModal.fromTemplateUrl('modal2.html', {
+            scope: $scope,
+            animation: 'slide-in-up'
+        }).then(function(modal2) {
+            $scope.modal2 = modal2;
+        });
+
+        $scope.openModal2 = function() {
+            $scope.modal2.show();
+        };
+        $scope.closeModal2 = function() {
+            $scope.modal2.hide();
+        };
+
+        //Cleanup the modal when we're done with it!
+        $scope.$on('$destroy', function() {
+            $scope.modal2.remove();
+        });
+
+        $scope.imageSrc = 'img/UVUmap.jpg';
+
+        //Don't forget to add map image in folder
+
 //Roberts Original Delete Code
 //.controller('ToDoListCtrl', function($scope) {
 //
