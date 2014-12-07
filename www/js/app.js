@@ -65,29 +65,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           }
       })
 
-//<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
       .state('app.welcome', {
           url: "/welcome",
           views: {
               'menuContent' :{
                   templateUrl: "templates/welcome.html",
                   controller:'homeCtrl',
-
                   resolve:{
-
                       friends: ['$http', function($http){
                           return $http.get('../api/friends.json').then(function(response){
-
                               return response.data;
                           })
 
@@ -97,42 +83,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           }
       })
 
-
-
-
-
-
-//=======
-//>>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
-            .state('app.playlists', {
+      .state('app.playlists', {
                 url: "/playlists",
                 views: {
                     'menuContent' :{
                         templateUrl: "templates/playlists.html",
-//<<<<<<< HEAD
-                        // controller: 'TodoCtrl'
-
-//=======
                         controller: 'PlaylistsCtrl'
-//>>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
                     }
                 }
             })
 
-//      .state('app.single', {
-  //        url: "/playlists/:playlistId",
-    //      views: {
-      //        'menuContent' :{
-        //          templateUrl: "templates/playlist.html",
-          //        controller: 'PlaylistCtrl'
-            //  }
-         // }
-     // });
-        // if none of the above states are matched, use this as the fallback
-//<<<<<<< HEAD
-        $urlRouterProvider.otherwise('/app/welcome');
-//=======
-        $urlRouterProvider.otherwise('/app/welcome');
-//>>>>>>> 794a208403aa22cd2e25a7d74ae53bdcc4602623
+       $urlRouterProvider.otherwise('/app/welcome');
 });
 
