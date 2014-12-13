@@ -30,15 +30,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       controller: 'AppCtrl'
     })
 
-    .state('app.search', {
-      url: "/search",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/search.html"
-        }
-      }
-    })
-
     .state('app.calendar', {
       url: "/calendar",
       views: {
@@ -83,15 +74,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           }
       })
 
-      .state('app.playlists', {
-                url: "/playlists",
-                views: {
-                    'menuContent' :{
-                        templateUrl: "templates/playlists.html",
-                        controller: 'PlaylistsCtrl'
-                    }
-                }
-            })
 
        $urlRouterProvider.otherwise('/app/welcome');
 });
