@@ -32,18 +32,7 @@ angular.module('starter.controllers', [])
     }, 1000);
   };
 })
-
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Log in to Your Profile', id: 1 },
-    { title: 'View Calendar', id: 2 },
-    { title: 'Check Schedule', id: 3 },
-    { title: 'Create a To-Do List', id: 4 },
-    { title: 'Manage Tasks', id: 5 },
-    { title: 'And more!', id: 6 }
-  ];
-})
-
+//Calendar - Days, Weeks, Month Views and Functionality
 .controller('DayCtrl', function($scope) {
   $scope.dayViewChange = function() {
     console.log($scope.dayView.checked);
@@ -70,48 +59,15 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('JobsCtrl', function($scope, JobService) {
-   JobService.titles().then(function(data) {
-     //this will execute when the
-     //AJAX call completes.
-     $scope.titles = data;
-       console.log(data);
-   });
-})
-
-.controller('JobDetailCtrl', function($scope, $stateParams, JobService) {
-   JobService.getJob($stateParams.jobId).then(function(data) {
-     //this will execute when the
-     //AJAX call completes.
-     $scope.job = data;
-     console.log(data);
-  });
-})
-
 .controller('TodoCtrl', function($scope,$ionicModal) {
   $scope.todos = [
-    { taskName: "Task With Priority Level 1",
-      id: 1,
+    { taskName: "Turn in Audiobook PDF Revisions",
       priority: "high",
       isDone: false },
-    { taskName: "Update jquer.in",
-      id: 2,
+    { taskName: "Do Podcast Review #4",
       priority: "medium",
       isDone: false },
-    { taskName: "Create a brand-new Resume",
-      id: 3,
-      priority: "low",
-      isDone: false }
-   ];
-
-  $scope.todos = [
-    { taskName: "Task With Priority Level 1",
-      priority: "high",
-      isDone: false },
-    { taskName: "Update jquer.in",
-      priority: "medium",
-      isDone: false },
-    { taskName: "Create a brand-new Resume",
+    { taskName: "Write Metadata Structure for Peer Review",
       priority: "low",
       isDone: false }
   ];
@@ -160,12 +116,12 @@ angular.module('starter.controllers', [])
   //Add Item to Class List, Open and Close Modal
   $scope.AddItem = function(data){
     $scope.toDoListItems.push({task:data.newItem, task2:data.newItem2, task3:data.newItem3, task4:data.newItem4, task5:data.newItem5});
+      // Clear Form Data
       data.newItem =' ';
       data.newItem2 =' ';
       data.newItem3 =' ';
       data.newItem4 =' ';
       data.newItem5 =' ';
-
       $scope.closeModal();
    };
 
