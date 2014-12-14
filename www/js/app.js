@@ -51,7 +51,22 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           url: "/schedule",
           views: {
               'menuContent' :{
-                  templateUrl: "templates/schedule.html"
+                  templateUrl: "templates/schedule.html",
+                  controller:'scheduleCtrl',
+                  resolve:{
+
+                      schedule: ['$http', function($http){
+                          return $http.get('../api/schedule.json')
+                              .then(function(response){
+
+
+                                  return response.data;
+                              })
+
+                      }]
+
+
+                  }
               }
           }
       })
@@ -63,16 +78,22 @@ angular.module('starter', ['ionic', 'starter.controllers'])
                   templateUrl: "templates/welcome.html",
                   controller:'homeCtrl',
                   resolve:{
-                      friends: ['$http', function($http){
-                          return $http.get('../api/friends.json').then(function(response){
+
+                      task: ['$http', function($http){
+                          return $http.get('../api/friends.json')
+                              .then(function(response){
+
+
                               return response.data;
                           })
 
                       }]
+
+
                   }
               }
           }
-      })
+      });
 
 
        $urlRouterProvider.otherwise('/app/welcome');

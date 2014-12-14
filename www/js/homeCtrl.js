@@ -3,8 +3,13 @@
  */
 angular
   .module('starter')
-    .controller('homeCtrl',  ['$scope', 'friends', function($scope, friends) {
-        $scope.friends = friends;
+    .controller('homeCtrl',  ['$scope', 'task', function($scope, task) {
+
+
+        $scope.task = task;
+
+
+
         $scope.title = "home";
         $scope.items = ['home', 'about', 'contact'];
 

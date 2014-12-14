@@ -149,7 +149,20 @@ label.item{
     padding-top: 40px;
 }
 
+#clickbutton {
+    text-align: center;
+}
 
+a.button.icon-right.bar-energized.ion-chevron-right {
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 7px #A9A9A9, 0px 0px 2px #D5D5D5;
+    font-weight: 600;
+    padding-top: .125em;
+    margin: 1.5em 0 2em 0;
+}
 
-
+.cardcontainer {
+    padding-top: 4em;
+    opacity:.7;
+}
 

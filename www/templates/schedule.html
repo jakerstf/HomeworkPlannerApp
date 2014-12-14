@@ -14,6 +14,24 @@
             </div>
         </ion-header-bar>
 
+        <ul ng-repeat="schedule in schedule">
+<div class="cardcontainer">
+            <div class="list card">
+
+                <div class="item item-divider">
+                <p class="example">Example</p>
+                    </div>
+                <div class="item item-body">
+            <p>{{schedule.class}}</p> <input type="text" placeholder="DGM 3790 | Rich Internet Applications I">
+            <p>{{schedule.teacher}}</p> <input type="text" placeholder="Thor Anderson">
+            <p>{{schedule.room}}</p> <input type="text" placeholder="CS 715b">
+            <p>{{schedule.time}}</p> <input type="text" placeholder="8:30 AM">
+            <p>{{schedule.description}}</p>
+</div>
+            </div>
+            </div>
+
+
         <ion-list show-delete="data.showDelete">
             <ion-item class="scheduleitem" ng-repeat="item in toDoListItems" ng-show="!$first">
                 <p class="schedule">Class:<br><a class="listitem">{{item.task}}</a></p>

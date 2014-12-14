@@ -1,9 +1,26 @@
 [
-	{"name": "Log in to Your Profile"},
-	{"name": "View Calendar"},
-    {"name": "Check Schedule"},
-    {"name": "Create a To-Do List"},
-    {"name": "View Calendar"}
+
+    {
+        "id": 0,
+        "image": "img/mcfly.jpg",
+        "title": "Prof. Mcfly",
+        "meta": "DGM 4990 Future Technologies",
+        "details": "Assignment Details:",
+        "description": "Read Chapter 10: Hoverboard Basics and prepare for the quiz at the beginning of class. Also, turn in your Hoverboard designs and prototype for mid-term grades. For extra credit you can also submit your Delorean  blueprints if ready."
+
+    },
+
+    {
+        "id": 1,
+        "image": "img/schrute.jpg",
+        "title": "Prof. Schrute",
+        "meta": "DGM 3777 Agriculture",
+        "details": "Assignment Details:",
+        "description": "Read Chapter 6: Beet Farm Techniques and prepare for the quiz at the beginning of class. Also, turn in your Website Templates for Schrute Farms for mid-term grades. For extra credit be sure to include the rich history of beet farming."
+
+    }
+
+
 ]
 
 
