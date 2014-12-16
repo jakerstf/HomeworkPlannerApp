@@ -166,3 +166,10 @@ a.button.icon-right.bar-energized.ion-chevron-right {
     opacity:.7;
 }
 
+p.delete {
+    color: red;
+    font-weight: bold;
+    font-size: 1em;
+    padding-bottom: .7em;
+}
+
