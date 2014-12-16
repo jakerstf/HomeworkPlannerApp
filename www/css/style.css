@@ -173,3 +173,18 @@ p.delete {
     padding-bottom: .7em;
 }
 
+#show {
+    display: block;
+
+}
+
+#hide {
+    display: none;
+}
+
+#finished {
+    color: red;
+}
+#commentMade {
+    color: blue;
+}

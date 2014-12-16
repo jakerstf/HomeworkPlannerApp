@@ -5,8 +5,7 @@
     <ion-content class="has-header" ng-controller="ToDoListCtrl">
 
         <ion-header-bar align-title="center" class="bar-positive">
-            <button class="button button-icon icon ion-ios7-minus-outline"
-                    ng-click="data.showDelete = !data.showDelete;"></button>
+            <button class="button button-icon icon ion-ios7-minus-outline" ng-click="data.showDelete = !data.showDelete;"></button>
             <h1 class="title"></h1>
             <div class="buttons">
                 <button class="button icon-left ion-map button-stable" ng-click="openModal2()"></button>
@@ -16,15 +15,24 @@
 
 
         <ion-list show-delete="data.showDelete">
-            <ion-item class="scheduleitem" ng-repeat="schedule in schedule" >
+            <ion-item class="scheduleitem" ng-repeat="schedule in schedule">
                 <p class="delete">Example - Delete Me</p>
-                <p class="schedule">Class:<br><a class="listitem">{{schedule.class}}</a></p>
-                <p class="schedule">Teacher:<br><a class="listitem">{{schedule.teacher}}</a></p>
-                <p class="schedule">Room:<br><a class="listitem">{{schedule.room}}</a></p>
-                <p class="schedule">Time:<br><a class="listitem">{{schedule.time}}</a></p>
-                <p class="schedule">Days of Week:<br><a class="listitem">{{schedule.days}}</a></p>
-                <ion-delete-button class="ion-minus-circled"
-                                   ng-click="onItemDelete(item)">
+                <p class="schedule">Class:
+                    <br><a class="listitem">{{schedule.class}}</a>
+                </p>
+                <p class="schedule">Teacher:
+                    <br><a class="listitem">{{schedule.teacher}}</a>
+                </p>
+                <p class="schedule">Room:
+                    <br><a class="listitem">{{schedule.room}}</a>
+                </p>
+                <p class="schedule">Time:
+                    <br><a class="listitem">{{schedule.time}}</a>
+                </p>
+                <p class="schedule">Days of Week:
+                    <br><a class="listitem">{{schedule.days}}</a>
+                </p>
+                <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)">
                 </ion-delete-button>
             </ion-item>
         </ion-list>
@@ -32,13 +40,22 @@
 
         <ion-list show-delete="data.showDelete">
             <ion-item class="scheduleitem" ng-repeat="item in toDoListItems" ng-show="!$first">
-                <p class="schedule">Class:<br><a class="listitem">{{item.class}}</a></p>
-                <p class="schedule">Teacher:<br><a class="listitem">{{item.teacher}}</a></p>
-                <p class="schedule">Room:<br><a class="listitem">{{item.room}}</a></p>
-                <p class="schedule">Time:<br><a class="listitem">{{item.time}}</a></p>
-                <p class="schedule">Days of Week:<br><a class="listitem">{{item.days}}</a></p>
-                <ion-delete-button class="ion-minus-circled"
-                                   ng-click="onItemDelete(item)">
+                <p class="schedule">Class:
+                    <br><a class="listitem">{{item.class}}</a>
+                </p>
+                <p class="schedule">Teacher:
+                    <br><a class="listitem">{{item.teacher}}</a>
+                </p>
+                <p class="schedule">Room:
+                    <br><a class="listitem">{{item.room}}</a>
+                </p>
+                <p class="schedule">Time:
+                    <br><a class="listitem">{{item.time}}</a>
+                </p>
+                <p class="schedule">Days of Week:
+                    <br><a class="listitem">{{item.days}}</a>
+                </p>
+                <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)">
                 </ion-delete-button>
             </ion-item>
         </ion-list>
@@ -56,16 +73,20 @@
                 <div class="list">
                     <div class="list list-inset">
                         <label class="item item-input" ng-model="data.newItem">
-                            Class Name: <input type="text" placeholder="DGM 3790 | Rich Internet Applications I" ng-model="data.newItem">
+                            Class Name:
+                            <input type="text" placeholder="DGM 3790 | Rich Internet Applications I" ng-model="data.newItem">
                         </label>
                         <label class="item item-input">
-                            Teacher's Name: <input type="text" placeholder="Thor Anderson" ng-model="data.newItem2">
+                            Teacher's Name:
+                            <input type="text" placeholder="Thor Anderson" ng-model="data.newItem2">
                         </label>
                         <label class="item item-input">
-                            Classroom Number: <input type="text" placeholder="CS 715b" ng-model="data.newItem3">
+                            Classroom Number:
+                            <input type="text" placeholder="CS 715b" ng-model="data.newItem3">
                         </label>
                         <label class="item item-input">
-                            Class Time: <input type="time" placeholder="8:30 AM" ng-model="data.newItem4">
+                            Class Time:
+                            <input type="time" placeholder="8:30 AM" ng-model="data.newItem4">
                         </label>
                         <label class="item item-input item-select">
                             <div class="input-label">
