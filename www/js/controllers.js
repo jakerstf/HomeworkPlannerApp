@@ -59,6 +59,7 @@ angular.module('starter.controllers', [])
   ];
 })
 
+
 .controller('TodoCtrl', function($scope,$ionicModal) {
   $scope.todos = [
     { taskName: "Turn in Audiobook PDF Revisions",
@@ -102,20 +103,24 @@ angular.module('starter.controllers', [])
   });
 })
 
+
 .controller('ToDoListCtrl', function($scope,$ionicModal) {
-  $scope.toDoListItems = [{
-  }];
+        $scope.toDoListItems = [{
+            }];
 
   $scope.data = {
     showDelete: false
   };
+
   //Remove Item from Class List
   $scope.onItemDelete = function(data) {
     $scope.toDoListItems.splice($scope.toDoListItems.indexOf(data), 1);
+      $scope.schedule.splice($scope.toDoListItems.indexOf(data), 1);
   };
+
   //Add Item to Class List, Open and Close Modal
   $scope.AddItem = function(data){
-    $scope.toDoListItems.push({task:data.newItem, task2:data.newItem2, task3:data.newItem3, task4:data.newItem4, task5:data.newItem5});
+    $scope.toDoListItems.push({class:data.newItem, teacher:data.newItem2, room:data.newItem3, time:data.newItem4, days:data.newItem5});
       // Clear Form Data
       data.newItem =' ';
       data.newItem2 =' ';
@@ -162,6 +167,7 @@ angular.module('starter.controllers', [])
   $scope.$on('$destroy', function() {
     $scope.modal2.remove();
   });
+
 
   $scope.imageSrc = 'img/UVUmap.jpg';
 });

@@ -14,31 +14,29 @@
             </div>
         </ion-header-bar>
 
-        <ul ng-repeat="schedule in schedule">
-<div class="cardcontainer">
-            <div class="list card">
 
-                <div class="item item-divider">
-                <p class="example">Example</p>
-                    </div>
-                <div class="item item-body">
-            <p>{{schedule.class}}</p> <input type="text" placeholder="DGM 3790 | Rich Internet Applications I">
-            <p>{{schedule.teacher}}</p> <input type="text" placeholder="Thor Anderson">
-            <p>{{schedule.room}}</p> <input type="text" placeholder="CS 715b">
-            <p>{{schedule.time}}</p> <input type="text" placeholder="8:30 AM">
-            <p>{{schedule.description}}</p>
-</div>
-            </div>
-            </div>
+        <ion-list show-delete="data.showDelete">
+            <ion-item class="scheduleitem" ng-repeat="schedule in schedule" >
+                <p class="delete">Example - Delete Me</p>
+                <p class="schedule">Class:<br><a class="listitem">{{schedule.class}}</a></p>
+                <p class="schedule">Teacher:<br><a class="listitem">{{schedule.teacher}}</a></p>
+                <p class="schedule">Room:<br><a class="listitem">{{schedule.room}}</a></p>
+                <p class="schedule">Time:<br><a class="listitem">{{schedule.time}}</a></p>
+                <p class="schedule">Days of Week:<br><a class="listitem">{{schedule.days}}</a></p>
+                <ion-delete-button class="ion-minus-circled"
+                                   ng-click="onItemDelete(item)">
+                </ion-delete-button>
+            </ion-item>
+        </ion-list>
 
 
         <ion-list show-delete="data.showDelete">
             <ion-item class="scheduleitem" ng-repeat="item in toDoListItems" ng-show="!$first">
-                <p class="schedule">Class:<br><a class="listitem">{{item.task}}</a></p>
-                <p class="schedule">Teacher:<br><a class="listitem">{{item.task2}}</a></p>
-                <p class="schedule">Room:<br><a class="listitem">{{item.task3}}</a></p>
-                <p class="schedule">Time:<br><a class="listitem">{{item.task4}}</a></p>
-                <p class="schedule">Days of Week:<br><a class="listitem">{{item.task5}}</a></p>
+                <p class="schedule">Class:<br><a class="listitem">{{item.class}}</a></p>
+                <p class="schedule">Teacher:<br><a class="listitem">{{item.teacher}}</a></p>
+                <p class="schedule">Room:<br><a class="listitem">{{item.room}}</a></p>
+                <p class="schedule">Time:<br><a class="listitem">{{item.time}}</a></p>
+                <p class="schedule">Days of Week:<br><a class="listitem">{{item.days}}</a></p>
                 <ion-delete-button class="ion-minus-circled"
                                    ng-click="onItemDelete(item)">
                 </ion-delete-button>
@@ -61,7 +59,7 @@
                             Class Name: <input type="text" placeholder="DGM 3790 | Rich Internet Applications I" ng-model="data.newItem">
                         </label>
                         <label class="item item-input">
-                            Teacher's Name: <input type="text" placeholder="Thor Anderson" ng-model="data.newItem2" required="">
+                            Teacher's Name: <input type="text" placeholder="Thor Anderson" ng-model="data.newItem2">
                         </label>
                         <label class="item item-input">
                             Classroom Number: <input type="text" placeholder="CS 715b" ng-model="data.newItem3">
@@ -88,7 +86,7 @@
         </div>
     </script>
 
-    <!--Jake Adding Modal 2-->
+    <!--Map Modal-->
 
     <script id="modal2.html" type="text/ng-template">
         <ion-modal-view>
@@ -101,6 +99,8 @@
                 <ion-scroll zooming="true" direction="xy" delegate-handle="zoom-pane" class="zoom-pane" min-zoom="1" scrollbar-x="false" scrollbar-y="false">
                     <img ng-src="{{imageSrc}}">
                 </ion-scroll>
+
+
 
             </ion-content>
         </ion-modal-view>

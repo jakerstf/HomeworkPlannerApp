@@ -6,8 +6,8 @@ angular
     .module('starter')
     .controller('scheduleCtrl',  ['$scope', 'schedule', function($scope, schedule) {
 
-
         $scope.schedule = schedule;
+
 
 
 
