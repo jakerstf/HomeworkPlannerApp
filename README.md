@@ -39,6 +39,12 @@ This is the repo for Group 5's project in DGM 3790. (Fall 2014)
         Example:
         
         $ ionic serve
+
+  To test the app with the iOS simulator you will need to add the platform, build the project, and emulate.
+    
+        $ ionic platform add ios
+        $ ionic build
+        $ ionic emulate
         
         
         
